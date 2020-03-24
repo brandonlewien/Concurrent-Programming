@@ -1,18 +1,18 @@
-1.	reset; make all
+reset; make all
 
 
-2.	For normal single manual testing
+For normal single manual testing
 
-a.	./containers -t <# threads> -l <# loops/iterations> <target>
+./containers -t <# threads> -l <# loops/iterations> <target>
 
-i.	Target = sglstack, sglqueue, treiber, ms, e_sgl, e_t, fc, basket
-
-
-3.	For standard automatic testing
-
-a.	./containers test
+Target = sglstack, sglqueue, treiber, ms, e_sgl, e_t, fc, basket
 
 
-4.	For perf
+For standard automatic testing
 
-a.	sudo perf stat -e page-faults ./containers … (rest of arguments)
+./containers test
+
+
+For perf
+
+perf stat -e page-faults ./containers … (rest of arguments)
